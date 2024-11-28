@@ -2,17 +2,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import * as Yup from 'yup';
+import { AuthFormProps, FormData } from '../../types/auth';
 import styles from './style/Auth.module.scss';
-
-interface AuthFormProps {
-  type: 'login' | 'register';
-}
-
-interface FormData {
-  username?: string;
-  email: string;
-  password: string;
-}
 
 const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
   const validationSchema = Yup.object().shape({
