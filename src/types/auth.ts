@@ -4,6 +4,12 @@ export interface AuthFormProps {
 
 export interface FormData {
   username?: string;
-  email: string;
+  email?: string;
   password: string;
+  credentials?: string;
+}
+
+export interface AuthContextProps {
+  isAuthenticated: boolean;
+  setIsAuthenticated: (value: boolean) => void;
 }

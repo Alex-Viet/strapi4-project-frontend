@@ -65,8 +65,17 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
 }
 
-.submitButton:hover {
-  background-color: #0056b3;
+.notActive {
+  background-color: grey;
+  cursor: auto;
+
+  &:hover {
+    background-color: grey;
+  }
 }
